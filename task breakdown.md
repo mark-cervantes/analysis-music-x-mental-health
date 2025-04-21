@@ -75,11 +75,11 @@ I understand. Let me revise the task breakdown with a presentation and Jupyter n
 
 ### Commit 3.3: EDA Insights Summary
 ```
-- [ ] Create notebooks/05_EDA_Key_Insights_Summary.ipynb
-  - [ ] Summarize key findings from EDA
-  - [ ] Create comparison charts
-  - [ ] Highlight correlations
-  - [ ] Generate presentation-ready visualizations
+- [/] Create notebooks/05_EDA_Key_Insights_Summary.ipynb
+  - [/] Summarize key findings from EDA
+  - [/] Create comparison charts
+  - [/] Highlight correlations
+  - [/] Generate presentation-ready visualizations
 ```
 
 ## 4. Feature Engineering
