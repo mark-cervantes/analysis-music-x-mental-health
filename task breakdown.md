@@ -85,8 +85,8 @@ I understand. Let me revise the task breakdown with a presentation and Jupyter n
 ## 4. Feature Engineering
 ### Commit 4.1: Feature Engineering Notebook
 ```
-- [ ] Create notebooks/06_Feature_Engineering.ipynb
-  - [ ] Create composite mental health score
+- [/] Create notebooks/06_Feature_Engineering.ipynb
+  - [x] Create composite mental health score (redo, mental health musn't be a composite score, but rather type of mental health illness should be inputted.
   - [ ] Encode categorical variables
   - [ ] Normalize numerical features
   - [ ] Ordinal encoding for frequency columns
