@@ -44,12 +44,12 @@ I understand. Let me revise the task breakdown with a presentation and Jupyter n
 
 ### Commit 2.2: Data Cleaning Notebook
 ```
-- [ ] Create notebooks/02_Data_Cleaning_and_Preprocessing.ipynb
-  - [ ] Handle missing values
-  - [ ] Clean categorical data
-  - [ ] Standardize frequency labels
-  - [ ] Export cleaned data to data/processed/cleaned_survey_data.csv
-  - [ ] Document data cleaning decisions with markdown cells
+- [/] Create notebooks/02_Data_Cleaning_and_Preprocessing.ipynb
+  - [/] Handle missing values
+  - [/] Clean categorical data
+  - [/] Standardize frequency labels
+  - [/] Export cleaned data to data/processed/cleaned_survey_data.csv
+  - [/] Document data cleaning decisions with markdown cells
 ```
 
 ## 3. Exploratory Data Analysis
