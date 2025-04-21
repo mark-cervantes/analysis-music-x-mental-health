@@ -1,356 +1,254 @@
-# Project Task and Subtask Breakdown: Music Therapy Recommendation System
+I understand. Let me revise the task breakdown with a presentation and Jupyter notebook-focused workflow:
 
-## 1. Project Setup & Structure
-### Commit 1.1: Initialize Project Structure
+# Presentation-Focused Project Task and Subtask Breakdown
+
+## 1. Project Setup & Basic Structure
+### Commit 1.1: Initialize Project
 ```
-- Create project root directory
-- Add .gitignore file (Python, Jupyter, data files)
-- Create folder structure:
-  - /data
-    - /raw
-    - /processed
-    - /external
-  - /notebooks
-  - /src
-    - /config
-    - /data_preprocessing
-    - /feature_engineering
-    - /models
-    - /evaluation
-    - /recommendation
-    - /utils
-    - /visualization
-  - /tests
-    - /unit
-    - /integration
-  - /docs
-    - /api
-    - /diagrams
-  - /experiments
-    - /logs
-  - /reports
-    - /figures
-    - /tables
-  - /presentations
+- [/] Create project root directory
+- [/] Add .gitignore (Jupyter, data files, Python cache)
+- [/] Create basic folder structure:
+  - [/] /data
+    - [/] /raw
+    - [/] /processed
+  - [/] /notebooks
+  - [/] /outputs
+    - [/] /figures
+- [/] Add existing data file: data/raw/mxmh_survey_results.csv
 ```
 
-### Commit 1.2: Setup Environment
+### Commit 1.2: Environment Configuration
 ```
-- Create requirements.txt with:
-  - python==3.x
-  - scikit-learn
-  - pandas
-  - numpy
-  - matplotlib
-  - seaborn
-  - jupyter
-  - pytest
-  - flake8
-  - black
-  - mypy
-- Create setup.py for package installation
-- Create README.md with initial project description
-- Create environment.yml for conda users
+- [/] Create requirements.txt with:
+  - [/] jupyter
+  - [/] pandas
+  - [/] numpy
+  - [/] scikit-learn
+  - [/] matplotlib
+  - [/] seaborn
+  - [/] plotly (for interactive visualizations)
+- [/] Create README.md with project overview
 ```
 
-### Commit 1.3: Configuration Setup
+## 2. Data Exploration & Cleaning
+### Commit 2.1: Initial Data Exploration Notebook
 ```
-- Create src/config/__init__.py
-- Create src/config/paths.py (file paths config)
-- Create src/config/column_names.py (dataset columns)
-- Create src/config/constants.py (project constants)
-- Create src/config/hyperparameters.py (ML parameters)
-- Add placeholder unit tests for config modules
-```
-
-## 2. Data Processing Pipeline
-### Commit 2.1: Basic Data Loader
-```
-- Create src/data_preprocessing/__init__.py
-- Create src/data_preprocessing/data_loader.py
-  - Implement CSVDataLoader class
-  - Add methods:
-    - load_raw_data()
-    - validate_schema()
-    - get_data_summary()
-- Create tests/unit/test_data_loader.py
+- [/] Create notebooks/01_Data_Overview_and_Quality_Check.ipynb
+  - [/] Load dataset
+  - [/] Display data structure
+  - [/] Show column information
+  - [/] Calculate missing values
+  - [/] Visualize missing data patterns
+  - [/] Create basic statistics summaries
 ```
 
-### Commit 2.2: Data Quality Analysis
+### Commit 2.2: Data Cleaning Notebook
 ```
-- Create src/data_preprocessing/data_quality.py
-  - Implement DataQualityAnalyzer class
-  - Add methods:
-    - check_missing_values()
-    - check_data_types()
-    - check_categorical_consistency()
-    - check_numerical_ranges()
-- Create notebooks/01_data_quality_analysis.ipynb
-- Create tests/unit/test_data_quality.py
+- [ ] Create notebooks/02_Data_Cleaning_and_Preprocessing.ipynb
+  - [ ] Handle missing values
+  - [ ] Clean categorical data
+  - [ ] Standardize frequency labels
+  - [ ] Export cleaned data to data/processed/cleaned_survey_data.csv
+  - [ ] Document data cleaning decisions with markdown cells
 ```
 
-### Commit 2.3: Data Cleaning Module
+## 3. Exploratory Data Analysis
+### Commit 3.1: EDA Visualizations Notebook (Part 1)
 ```
-- Create src/data_preprocessing/data_cleaner.py
-  - Implement DataCleaner class
-  - Add methods:
-    - handle_missing_values()
-    - standardize_categorical_values()
-    - clean_numeric_outliers()
-    - harmonize_frequency_labels()
-- Create tests/unit/test_data_cleaner.py
-```
-
-## 3. Feature Engineering
-### Commit 3.1: Basic Feature Engineering
-```
-- Create src/feature_engineering/__init__.py
-- Create src/feature_engineering/feature_creator.py
-  - Implement FeatureCreator class
-  - Add methods:
-    - create_composite_mental_health_score()
-    - encode_music_effects()
-    - encode_streaming_service()
-- Create tests/unit/test_feature_creator.py
+- [ ] Create notebooks/03_EDA_Demographic_Analysis.ipynb
+  - [ ] Age distribution analysis
+  - [ ] Streaming service preferences
+  - [ ] Music listening habits (hours per day)
+  - [ ] Create interactive visualizations with plotly
+  - [ ] Save key figures to outputs/figures/
 ```
 
-### Commit 3.2: Advanced Feature Engineering
+### Commit 3.2: EDA Visualizations Notebook (Part 2)
 ```
-- Create src/feature_engineering/feature_encoder.py
-  - Implement FeatureEncoder class
-  - Add methods:
-    - encode_frequency_columns()
-    - one_hot_encode_categorical()
-    - normalize_numerical_features()
-- Create tests/unit/test_feature_encoder.py
-```
-
-### Commit 3.3: Feature Selection
-```
-- Create src/feature_engineering/feature_selector.py
-  - Implement FeatureSelector class
-  - Add methods:
-    - select_features_by_correlation()
-    - select_features_by_importance()
-    - create_feature_sets()
-- Create tests/unit/test_feature_selector.py
+- [ ] Create notebooks/04_EDA_Music_and_Mental_Health.ipynb
+  - [ ] Genre preferences distribution
+  - [ ] Mental health scores distribution
+  - [ ] Correlation heatmap: Genre frequencies vs Mental Health scores
+  - [ ] Music effects on mental health by genre (visualization)
+  - [ ] Create storytelling cells explaining findings
 ```
 
-## 4. Exploratory Data Analysis
-### Commit 4.1: EDA Visualization Utilities
+### Commit 3.3: EDA Insights Summary
 ```
-- Create src/visualization/__init__.py
-- Create src/visualization/eda_plots.py
-  - Implement EDAVisualizer class
-  - Add methods:
-    - plot_distribution()
-    - plot_correlation_heatmap()
-    - plot_boxplots()
-    - plot_scatter_matrix()
-- Create tests/unit/test_eda_plots.py
+- [ ] Create notebooks/05_EDA_Key_Insights_Summary.ipynb
+  - [ ] Summarize key findings from EDA
+  - [ ] Create comparison charts
+  - [ ] Highlight correlations
+  - [ ] Generate presentation-ready visualizations
 ```
 
-### Commit 4.2: EDA Analysis Notebook
+## 4. Feature Engineering
+### Commit 4.1: Feature Engineering Notebook
 ```
-- Create notebooks/02_exploratory_data_analysis.ipynb
-  - Distribution analysis
-  - Missing value analysis
-  - Correlation analysis
-  - Genre vs mental health visualization
-  - Save generated visualizations to reports/figures/
+- [ ] Create notebooks/06_Feature_Engineering.ipynb
+  - [ ] Create composite mental health score
+  - [ ] Encode categorical variables
+  - [ ] Normalize numerical features
+  - [ ] Ordinal encoding for frequency columns
+  - [ ] Document feature decisions
+  - [ ] Save processed data to data/processed/features_engineered.csv
 ```
 
 ## 5. Model Development
-### Commit 5.1: Base Model Architecture
+### Commit 5.1: Data Preparation for Modeling
 ```
-- Create src/models/__init__.py
-- Create src/models/base_model.py
-  - Implement BaseModel abstract class
-  - Define interface:
-    - train()
-    - predict()
-    - get_hyperparameters()
-- Create tests/unit/test_base_model.py
+- [ ] Create notebooks/07_Data_Preparation_for_ML.ipynb
+  - [ ] Define feature sets
+  - [ ] Handle target variable (Music effects)
+  - [ ] Create train-test split
+  - [ ] Visualize data distributions
+  - [ ] Save prepared datasets
 ```
 
-### Commit 5.2: SVM Implementation
+### Commit 5.2: SVM Model Development
 ```
-- Create src/models/svm_classifier.py
-  - Implement SVMClassifier class (inherits BaseModel)
-  - Add kernels: linear, RBF, polynomial
-  - Implement grid search
-- Create tests/unit/test_svm_classifier.py
-```
-
-### Commit 5.3: Logistic Regression Implementation
-```
-- Create src/models/logistic_regression_classifier.py
-  - Implement LogisticRegressionClassifier class
-  - Add L1/L2 regularization options
-  - Implement grid search
-- Create tests/unit/test_logistic_regression_classifier.py
+- [ ] Create notebooks/08_SVM_Model_Development.ipynb
+  - [ ] Implement SVM classifier
+  - [ ] Try different kernels (linear, RBF, polynomial)
+  - [ ] Perform grid search
+  - [ ] Log results in observation format
+  - [ ] Create visualizations of results
+  - [ ] Save observation logs to outputs/observation_logs/
 ```
 
-### Commit 5.4: Decision Tree Implementation
+### Commit 5.3: Logistic Regression Model Development
 ```
-- Create src/models/decision_tree_classifier.py
-  - Implement DecisionTreeClassifier class
-  - Add max_depth, min_samples_split parameters
-  - Implement grid search
-- Create tests/unit/test_decision_tree_classifier.py
-```
-
-## 6. Model Evaluation Framework
-### Commit 6.1: Evaluation Metrics
-```
-- Create src/evaluation/__init__.py
-- Create src/evaluation/metrics.py
-  - Implement MetricsCalculator class
-  - Add methods:
-    - calculate_f1_score()
-    - calculate_accuracy()
-    - calculate_precision_recall()
-    - generate_confusion_matrix()
-- Create tests/unit/test_metrics.py
+- [ ] Create notebooks/09_Logistic_Regression_Development.ipynb
+  - [ ] Implement Logistic Regression
+  - [ ] Try L1/L2 regularization
+  - [ ] Perform grid search
+  - [ ] Log results
+  - [ ] Create comparison visualizations
+  - [ ] Save observation logs
 ```
 
-### Commit 6.2: Cross-Validation Module
+### Commit 5.4: Decision Tree Model Development
 ```
-- Create src/evaluation/cross_validation.py
-  - Implement CrossValidator class
-  - Add methods:
-    - perform_k_fold_cv()
-    - stratified_sampling()
-    - generate_fold_metrics()
-- Create tests/unit/test_cross_validation.py
-```
-
-### Commit 6.3: Experiment Logger
-```
-- Create src/evaluation/experiment_logger.py
-  - Implement ExperimentLogger class
-  - Add methods:
-    - log_experiment_params()
-    - log_metrics()
-    - save_experiment_results()
-- Create tests/unit/test_experiment_logger.py
+- [ ] Create notebooks/10_Decision_Tree_Development.ipynb
+  - [ ] Implement Decision Tree classifier
+  - [ ] Experiment with max_depth and min_samples_split
+  - [ ] Perform grid search
+  - [ ] Visualize decision tree
+  - [ ] Log results and save
 ```
 
-## 7. Model Training Pipeline
-### Commit 7.1: Training Pipeline
+## 6. Model Evaluation
+### Commit 6.1: Cross-Validation Analysis
 ```
-- Create src/training_pipeline.py
-  - Implement TrainingPipeline class
-  - Add methods:
-    - load_and_preprocess_data()
-    - train_all_models()
-    - evaluate_models()
-    - save_best_models()
-- Create tests/integration/test_training_pipeline.py
+- [ ] Create notebooks/11_Cross_Validation_Analysis.ipynb
+  - [ ] Implement K-fold cross-validation
+  - [ ] Evaluate all models
+  - [ ] Create cross-validation visualizations
+  - [ ] Save detailed results
 ```
 
-### Commit 7.2: Model Training Notebook
+### Commit 6.2: Model Comparison Dashboard
 ```
-- Create notebooks/03_model_training.ipynb
-  - Train all three models
-  - Perform hyperparameter tuning
-  - Compare results
-  - Save observation logs
-```
-
-## 8. Recommendation System
-### Commit 8.1: Basic Recommendation Engine
-```
-- Create src/recommendation/__init__.py
-- Create src/recommendation/recommendation_engine.py
-  - Implement RecommendationEngine class
-  - Add methods:
-    - predict_genre()
-    - get_confidence_scores()
-    - generate_explanation()
-- Create tests/unit/test_recommendation_engine.py
+- [ ] Create notebooks/12_Model_Performance_Comparison.ipynb
+  - [ ] Load all observation logs
+  - [ ] Create comparative metrics table
+  - [ ] Generate confusion matrices for each model
+  - [ ] Plot ROC curves
+  - [ ] Create interactive comparison dashboard
 ```
 
-### Commit 8.2: Recommendation System UI
+## 7. Recommendation System Prototype
+### Commit 7.1: Basic Recommendation Function
 ```
-- Create src/recommendation/recommendation_ui.py
-  - Implement RecommendationUI class
-  - Add methods:
-    - get_user_input()
-    - display_recommendations()
-    - create_sample_predictions()
-- Create tests/unit/test_recommendation_ui.py
-```
-
-## 9. Visualization & Reporting
-### Commit 9.1: Result Visualization Module
-```
-- Create src/visualization/result_plots.py
-  - Implement ResultVisualizer class
-  - Add methods:
-    - plot_model_comparison()
-    - plot_confusion_matrices()
-    - plot_roc_curves()
-- Create tests/unit/test_result_plots.py
+- [ ] Create notebooks/13_Recommendation_Engine_Prototype.ipynb
+  - [ ] Implement recommend_genre() function
+  - [ ] Create confidence score calculator
+  - [ ] Demonstrate sample predictions
+  - [ ] Add interactive widgets for user input
 ```
 
-### Commit 9.2: Flow Diagram Generator
+### Commit 7.2: Recommendation System Demo
 ```
-- Create src/visualization/diagram_generator.py
-  - Implement DiagramGenerator class
-  - Add methods:
-    - create_system_flow_diagram()
-    - create_use_case_diagram()
-    - export_diagrams()
-- Create tests/unit/test_diagram_generator.py
+- [ ] Create notebooks/14_Interactive_Recommendation_Demo.ipynb
+  - [ ] Create interactive demo using ipywidgets
+  - [ ] Add explanations for recommendations
+  - [ ] Create user-friendly interface
+  - [ ] Include visualization of results
 ```
 
-## 10. Documentation & Final Deliverables
-### Commit 10.1: Technical Documentation
+## 8. Final Presentations
+### Commit 8.1: Executive Summary Notebook
 ```
-- Create docs/api/model_api.md
-- Create docs/api/recommendation_api.md
-- Create docs/installation_guide.md
-- Create docs/user_guide.md
-```
-
-### Commit 10.2: Performance Report
-```
-- Create notebooks/04_performance_analysis.ipynb
-  - Generate comparison tables
-  - Create visualization plots
-  - Document insights
-  - Export results to reports/
+- [ ] Create notebooks/15_Executive_Summary.ipynb
+  - [ ] High-level project overview
+  - [ ] Key findings
+  - [ ] Best-performing model
+  - [ ] Business implications
+  - [ ] Export as slides using nbconvert
 ```
 
-### Commit 10.3: Presentation Materials
+### Commit 8.2: Technical Presentation Notebook
 ```
-- Create presentations/model_comparison_report.pptx
-- Create presentations/recommendation_system_demo.ipynb
-- Create presentations/project_summary.pdf
-```
-
-## 11. Final Testing & Deployment
-### Commit 11.1: Integration Tests
-```
-- Create tests/integration/test_end_to_end.py
-- Create tests/integration/test_recommendation_system.py
-- Create tests/performance/benchmark_tests.py
+- [ ] Create notebooks/16_Technical_Presentation.ipynb
+  - [ ] Detailed algorithm comparison
+  - [ ] Performance metrics
+  - [ ] Model selection reasoning
+  - [ ] Future improvements
+  - [ ] Convert to slides
 ```
 
-### Commit 11.2: Project Finalization
+### Commit 8.3: Demo Presentation
 ```
-- Update README.md with final documentation
-- Create CHANGELOG.md
-- Create LICENSE file
-- Finalize requirements.txt
-- Create demo.py for easy demonstration
+- [ ] Create presentations/recommendation_system_demo.ipynb
+  - [ ] Live demonstration of recommendation system
+  - [ ] Sample use cases
+  - [ ] Real-time prediction examples
+  - [ ] Interactive visualizations
 ```
 
-### Commit 11.3: Release
+## 9. Documentation & Final Touches
+### Commit 9.1: Project Documentation
 ```
-- Tag version 1.0.0
-- Create release notes
-- Create deployment guide
-- Archive experiment logs
+- [ ] Update README.md with:
+  - [ ] Project overview
+  - [ ] Notebook descriptions
+  - [ ] How to run the analysis
+  - [ ] Key findings
+- [ ] Create slides_export.sh script for presentations
 ```
+
+### Commit 9.2: Export Results
+```
+- [ ] Create notebooks/17_Generate_Final_Reports.ipynb
+  - [ ] Export all figures to outputs/figures/
+  - [ ] Create PDF reports
+  - [ ] Generate HTML versions of notebooks
+  - [ ] Create GitHub Pages documentation
+```
+
+## 10. Presentation Finalization
+### Commit 10.1: Slide Deck Creation
+```
+- [ ] Create presentations/music_therapy_analysis.slides.html
+  - [ ] Convert key notebooks to slides
+  - [ ] Add custom CSS for better presentation
+  - [ ] Include interactive elements
+```
+
+### Commit 10.2: Demo Video Script
+```
+- [ ] Create presentations/demo_script.md
+  - [ ] Script for recording demonstration
+  - [ ] Key talking points
+  - [ ] Screenshot guides
+```
+
+### Commit 10.3: Final Review & Polish
+```
+- [ ] Clean up all notebooks
+- [ ] Ensure all cells run without errors
+- [ ] Final formatting check
+- [ ] Create project checkpoints
+```
+
+This revised structure focuses on creating a coherent narrative through Jupyter notebooks, with emphasis on visualization and interactive presentations rather than production code architecture.
