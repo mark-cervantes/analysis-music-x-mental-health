@@ -55,22 +55,22 @@ I understand. Let me revise the task breakdown with a presentation and Jupyter n
 ## 3. Exploratory Data Analysis
 ### Commit 3.1: EDA Visualizations Notebook (Part 1)
 ```
-- [ ] Create notebooks/03_EDA_Demographic_Analysis.ipynb
-  - [ ] Age distribution analysis
-  - [ ] Streaming service preferences
-  - [ ] Music listening habits (hours per day)
-  - [ ] Create interactive visualizations with plotly
-  - [ ] Save key figures to outputs/figures/
+- [/] Create notebooks/03_EDA_Demographic_Analysis.ipynb
+  - [/] Age distribution analysis
+  - [/] Streaming service preferences
+  - [/] Music listening habits (hours per day)
+  - [/] Create interactive visualizations with plotly
+  - [/] Save key figures to outputs/figures/
 ```
 
 ### Commit 3.2: EDA Visualizations Notebook (Part 2)
 ```
-- [ ] Create notebooks/04_EDA_Music_and_Mental_Health.ipynb
-  - [ ] Genre preferences distribution
-  - [ ] Mental health scores distribution
-  - [ ] Correlation heatmap: Genre frequencies vs Mental Health scores
-  - [ ] Music effects on mental health by genre (visualization)
-  - [ ] Create storytelling cells explaining findings
+- [/] Create notebooks/04_EDA_Music_and_Mental_Health.ipynb
+  - [/] Genre preferences distribution
+  - [/] Mental health scores distribution
+  - [/] Correlation heatmap: Genre frequencies vs Mental Health scores
+  - [/] Music effects on mental health by genre (visualization)
+  - [/] Create storytelling cells explaining findings
 ```
 
 ### Commit 3.3: EDA Insights Summary
